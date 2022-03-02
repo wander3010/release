@@ -2,22 +2,22 @@ pipeline {
 	
 	agent any
 	stages {
-		stage ('Stage1 - 21051247') {
+		stage('Stage1 - 21051247') {
 			steps {
 				echo "Stage 1 Completed - 21051247"
 			}
 		} 
 			
-		stage ('Docker Configurations') {
+		stage('Docker Configurations') {
 			parallel {
-				stage ('Stage2 - 21051247') {
+				stage('Stage2 - 21051247') {
 					steps {
 						sh '''
 							docker run -d -it --name=stage2-21051247-container apache2-21051247-image /bin/sh -c "catalina.sh run"
 							'''
 						echo "Stage 2 Completed - 21051247"
 					}
-				stage ('Stage3 - 21051247') {
+				stage('Stage3 - 21051247') {
 					steps {
 						echo "Stage 3 Completed - 21051247"
 					}
@@ -25,13 +25,13 @@ pipeline {
             }
         }
 		
-		stage ('Stage4 - 21051247') {
+		stage('Stage4 - 21051247') {
 			steps {
 				input('Proceed to release the work?')
 				}
 			}
 			
-		stage ('Stage5 - 21051247') {			
+		stage('Stage5 - 21051247') {			
 			echo "Stage 5 Completed - 21051247"			
 				}
 			}
