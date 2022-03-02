@@ -27,7 +27,7 @@ pipeline {
 					}
 				}
             
-        }
+        
 	
 		stage ('Stage4 - 21051247') {
 			steps {
