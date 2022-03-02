@@ -2,13 +2,13 @@ pipeline {
 	
 	agent any
 	stages {
-		stage('Stage1 - 21051247') {
+		stage ('Stage1 - 21051247') {
 			steps {
 				echo "Stage 1 Completed - 21051247"
 			}
 		} 
 			
-		stages('Docker Configurations') {
+		stage ('Docker Configurations') {
 			parallel {
 				stage('Stage2 - 21051247') {
 					steps {
