@@ -14,9 +14,13 @@ pipeline {
 						sh '''
 							docker run -d -it --name=stage2-21051247-container apache2-21051247-image /bin/sh -c "catalina.sh run"
 							'''
-						echo "Stage 2 Completed - 21051247"	
-					}					
-				}
+					}
+					steps{
+						echo "Stage 2 Completed - 21051247"
+					}
+							
+				}					
+							
 				'Stage3 - 21051247': {
 					steps {
 						echo "Stage 3 Completed - 21051247"
@@ -35,6 +39,5 @@ pipeline {
 			echo "Stage 5 Completed - 21051247"			
 		}
 	}
-}	
-					
+}				
 	
