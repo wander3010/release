@@ -35,7 +35,7 @@ pipeline {
 			}
 		}
 			
-		stage ('Stage5 - 21051247') {
+		('Stage5 - 21051247') {
 			steps {
 				echo "Stage 5 Completed - 21051247"
 			}								
