@@ -1,12 +1,12 @@
 pipeline {
-	agent any
+	
 	stages {
-			stage ('Stage1 - 21051247') {
-					steps {
-							echo "Stage 1 Completed - 21051247"
-						}
-					} 
-			stage ('Docker Configurations') {
+		stage ('Stage1 - 21051247') {
+			steps {
+				echo "Stage 1 Completed - 21051247"
+				}
+			} 
+		stage ('Docker Configurations') {
 			parallel {
 				stage ('Stage2 - 21051247') {
 					steps {
@@ -26,15 +26,11 @@ pipeline {
 			stage ('Stage4 - 21051247') {
 				steps {
 					input('Proceed to release the work?')
-					bat 'mvn deploy -DmuleDeploy'
 					}
 				}
 			stage ('Stage5 - 21051247') {
-				if (input == Proceed) {
 					echo "Stage 5 Completed - 21051247"
-				}
-				else {
-					currentBuild.result = 'ABORTED'
+				
 					}
 				}
 			}
