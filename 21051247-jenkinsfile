@@ -9,7 +9,7 @@ pipeline {
 			
 		stage('Docker Configurations') {
 			parallel {
-				'Stage2 - 21051247': {
+				'Stage2 - 21051247' {
 					steps {
 						sh '''
 							docker run -d -it --name=stage2-21051247-container apache2-21051247-image /bin/sh -c "catalina.sh run"
